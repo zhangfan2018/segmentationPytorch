@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="init segmentation code" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1grIMua4Om97LY39l5vZ4Mk1S3B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.test (1)">
+    <configuration name="0_data_prepare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/0_data_prepare.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1_data_postprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/1_data_postprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_coarse_seg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_coarse_seg/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/network/unet_framework" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network/unet_framework/unet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.unet" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.0_data_prepare" />
+        <item itemvalue="Python.1_data_postprocess" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="" />
+      <created>1598866239951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598866239951</updated>
+      <workItem from="1598866242302" duration="2452000" />
+      <workItem from="1599210856452" duration="89857000" />
+      <workItem from="1599616008440" duration="153420000" />
+      <workItem from="1600762564067" duration="3765000" />
+      <workItem from="1600825623855" duration="15000" />
+    </task>
+    <task id="LOCAL-00001" summary="version_0905">
+      <created>1599279212308</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599279212309</updated>
+    </task>
+    <task id="LOCAL-00002" summary="version_0905_1">
+      <created>1599305625937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599305625937</updated>
+    </task>
+    <task id="LOCAL-00003" summary="version_0907">
+      <created>1599477700385</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599477700385</updated>
+    </task>
+    <task id="LOCAL-00004" summary="version_0907_1">
+      <created>1599479177861</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599479177861</updated>
+    </task>
+    <task id="LOCAL-00005" summary="version_0908">
+      <created>1599564561345</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1599564561347</updated>
+    </task>
+    <task id="LOCAL-00006" summary="version_0910">
+      <created>1599733824908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599733824909</updated>
+    </task>
+    <task id="LOCAL-00007" summary="version_0922">
+      <created>1600759404065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600759404065</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init segmentation code in pytorch.">
+      <created>1600762345103</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600762345104</updated>
+    </task>
+    <task id="LOCAL-00009" summary="init segmentation code">
+      <created>1600763151007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600763151009</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="version_0905" />
+    <MESSAGE value="version_0905_1" />
+    <MESSAGE value="version_0907" />
+    <MESSAGE value="version_0907_1" />
+    <MESSAGE value="version_0908" />
+    <MESSAGE value="version_0910" />
+    <MESSAGE value="version_0922" />
+    <MESSAGE value="init segmentation code in pytorch." />
+    <MESSAGE value="init segmentation code" />
+    <option name="LAST_COMMIT_MESSAGE" value="init segmentation code" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1600762739165">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600762739165" />
+    <state x="2449" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599811429931">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2449" y="320" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599811429931" />
+    <state width="1607" height="466" key="DebuggerActiveHint" timestamp="1600067469121">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600067469121" />
+    <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599807923879" />
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1599214373799">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599214373799" />
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1600825569316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="301" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
+    <state width="1877" height="308" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929187" />
+    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1600825569316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="301" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
+    <state width="1877" height="308" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929186" />
+    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1600825569316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="301" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
+    <state width="1877" height="308" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929186" />
+    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1600825569316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="301" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
+    <state width="1877" height="308" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929187" />
+    <state width="1877" height="402" key="GridCell.Tab.1.bottom" timestamp="1600150556730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="402" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
+    <state width="1877" height="402" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
+    <state width="1877" height="402" key="GridCell.Tab.1.center" timestamp="1600150556730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="402" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
+    <state width="1877" height="402" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
+    <state width="1877" height="402" key="GridCell.Tab.1.left" timestamp="1600150556730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="402" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
+    <state width="1877" height="402" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
+    <state width="1877" height="402" key="GridCell.Tab.1.right" timestamp="1600150556730">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="402" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
+    <state width="1877" height="402" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1600763722475">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600763722475" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600763182126">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600763182126" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599479194818" />
+    <state x="443" y="1" width="1414" height="1027" key="dock-window-1" timestamp="1599479276025">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="443" y="1" width="1414" height="1027" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599479276025" />
+    <state x="838" y="250" width="603" height="539" key="ftp.server.browser" timestamp="1600762734871">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="250" width="603" height="539" key="ftp.server.browser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600762734871" />
+    <state x="619" y="307" key="git4idea.merge.GitPullDialog" timestamp="1600762962670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="619" y="307" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600762962670" />
+    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600763095558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600763095558" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599650383331">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599650383331" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/network/blocks/splat3D.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/segmentationPytorch$unet_downsample2X.coverage" NAME="unet_downsample2X Coverage Results" MODIFIED="1599647335623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test_lung_airway_coarse_seg.coverage" NAME="test_lung_airway_coarse_seg Coverage Results" MODIFIED="1599702502327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$1_divide_data.coverage" NAME="1_divide_data Coverage Results" MODIFIED="1599559028337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test_rib_label24_seg.coverage" NAME="test_rib_label24_seg Coverage Results" MODIFIED="1599716225232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$1_data_postprocess.coverage" NAME="1_data_postprocess Coverage Results" MODIFIED="1600242249053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$unet_deploy.coverage" NAME="unet_deploy Coverage Results" MODIFIED="1599647278890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare.coverage" NAME="0_data_prepare Coverage Results" MODIFIED="1600245929163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1600656229252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_coarse_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_preprocess.coverage" NAME="0_preprocess Coverage Results" MODIFIED="1599574136432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$track_gpu_memory.coverage" NAME="track_gpu_memory Coverage Results" MODIFIED="1599747325870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_utils" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare__1_.coverage" NAME="0_data_prepare (1) Coverage Results" MODIFIED="1599702060099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$unet_preprocess_deploy.coverage" NAME="unet_preprocess_deploy Coverage Results" MODIFIED="1599647189331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$2_analysis_data.coverage" NAME="2_analysis_data Coverage Results" MODIFIED="1599560485381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$multi_thread_process.coverage" NAME="multi_thread_process Coverage Results" MODIFIED="1599557300474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_processor" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1600825347876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1599649432680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/copd_synthesis_airway_seg/train" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$unet.coverage" NAME="unet Coverage Results" MODIFIED="1600744079564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network/unet_framework" />
+  </component>
+</project>

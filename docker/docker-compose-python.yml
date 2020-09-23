@@ -1,0 +1,28 @@
+version: '2.4' 
+services:
+  zhangfan_devel_env:
+    image: harbor.do.proxima-ai.com/alpha/alpha-devel:1.2 
+    restart: always
+    runtime:
+       nvidia
+    environment:
+      - LANG=C.UTF-8
+    ports:
+      # SSH
+      - "30060:22"
+      # jupyter
+      - "30061:8888"
+      # tensorboard
+      - "30062:6006"
+
+    container_name: zhangfan-devel-1.2
+    pid: "host"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /home:/home
+      - /data:/data
+      - /fileser:/fileser
+    network_mode:
+      bridge
+    shm_size: 48G

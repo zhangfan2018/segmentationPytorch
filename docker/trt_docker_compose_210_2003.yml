@@ -1,0 +1,21 @@
+version: '2.4'
+services:
+  trt-gpu-serving-zf-210-2003:
+    image: harbor.do.proxima-ai.com/alpha/nvcr.io/nvidia/tensorrtserver:20.03-py3
+    restart: always
+    runtime:
+      nvidia
+    container_name: trt-gpu-serving-zf-210-2003
+    ports:
+      - "19399:8001"
+      - "19398:8000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /home/zhangfan/trt_model:/data
+      - /home:/home
+    entrypoint:
+      - /bin/bash
+      - /data/entrypoint.sh
+    network_mode:
+      bridge
+    shm_size: 48G
