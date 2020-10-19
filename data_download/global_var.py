@@ -23,7 +23,7 @@ for i in range(min_density_4_mass, max_density_4_mass + 1):
     else:
         density_trans_dict_4_mass[i] = 0
 
-DATA_DIR = '/fileser/zhangfan/DataSet/airway_segment_data/image_1'
+DATA_DIR = '/fileser/zhangfan/DataSet/airway_segment_data/image'
 
 IMAGE_DIR = os.path.join(DATA_DIR, 'IMAGE')
 LABEL_DIR = os.path.join(DATA_DIR, 'LABEL')

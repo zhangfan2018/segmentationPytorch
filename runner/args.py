@@ -23,7 +23,7 @@ class ModelOptions:
         parser.add_argument('--batch_size', type=int, default=1, help='size of batch')
         parser.add_argument('--n_workers', type=int, default=4, help="number of workers in cpu")
         parser.add_argument('--epochs', type=int, default=60, help='number of epochs to train')
-        parser.add_argument('--gpu_ids', type=str, default='4', help='gpu ids: e.g. 0,1. use -1 for CPU')
+        parser.add_argument('--gpu_ids', type=str, default='0, 1, 2, 3', help='gpu ids: e.g. 0,1. use -1 for CPU')
         parser.add_argument('--out_dir', type=str, default='./output', help='output information is saved here')
 
         # optional parameter.

@@ -39,6 +39,16 @@ class DiceMetric(nn.Module):
         return dice
 
 
+def compute_dice(predict, gt):
+    predict = predict.astype(np.float)
+    gt = gt.astype(np.float)
+    intersection = np.sum(predict * gt)
+    union = np.sum(predict + gt)
+    dice = 2.000 * intersection / (union + 1e-5)
+
+    return dice
+
+
 def compute_precision_recall_F1(predict, gt, num_class):
     """compute precision, recall and F1"""
     tp, tp_fp, tp_fn = [0.] * num_class, [0.] * num_class, [0.] * num_class

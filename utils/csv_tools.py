@@ -64,10 +64,10 @@ def write_to_csv(contents, save_path, header=None):
     csvfile = open(save_path, "w")
     save_csv = csv.writer(csvfile, delimiter=",")
     if header:
-        save_csv.writerow([header])
+        header = [header] if type(header) != list else header
+        save_csv.writerow(header)
     for content in contents:
-        if type(content) != list:
-            content = [content]
+        content = [content] if type(content) != list else content
         save_csv.writerow(content)
     csvfile.close()
 
@@ -92,7 +92,10 @@ def read_txt(file_dir):
 def write_txt(txt_path, content, mod="w"):
     """write list to .txt file."""
     with open(txt_path, mod) as myfile:
-        np.savetxt(myfile, content, delimiter="\n")
+        for t_content in content:
+            t_content += "\n"
+            myfile.writelines(t_content)
+        myfile.close()
 
 
 def txt_to_csv(txt_path, csv_path, header="seriesUid"):
@@ -103,5 +106,5 @@ def txt_to_csv(txt_path, csv_path, header="seriesUid"):
 
 def csv_to_txt(csv_path, txt_path):
     """convert .csv file to .txt file."""
-    contents = read_csv(csv_path)
+    contents = read_csv(csv_path)[1:]
     write_txt(txt_path, contents, mod="w")

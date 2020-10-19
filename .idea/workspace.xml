@@ -10,7 +10,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="init segmentation code" />
+    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="init segmentation code">
+      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/2_compute_dice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/3_convert_deploy_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/deploy_unet_block3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/unet_block3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_download/download_dicom_from_jianying.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_download/download_dicom_from_jianying.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_download/global_var.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_download/global_var.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_download/mask_download.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_download/mask_download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processor/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processor/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processor/data_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processor/data_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/0_data_prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/0_data_prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/1_data_postprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/1_data_postprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/args.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/args.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/metric.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/csv_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/csv_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/mask_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mask_utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,11 +59,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../segmentPytorch/SegmentPytorch" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.test (1)">
+  <component name="RunManager" selected="Python.0_data_prepare">
     <configuration name="0_data_prepare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2_compute_dice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,12 +117,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/2_compute_dice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/temp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,34 +161,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_coarse_seg" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/train_temp" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_coarse_seg/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="unet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="segmentationPytorch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/network/unet_framework" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network/unet_framework/unet.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/train_temp/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.unet" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.0_data_prepare" />
+        <item itemvalue="Python.2_compute_dice" />
         <item itemvalue="Python.1_data_postprocess" />
+        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +199,12 @@
       <workItem from="1599210856452" duration="89857000" />
       <workItem from="1599616008440" duration="153420000" />
       <workItem from="1600762564067" duration="3765000" />
-      <workItem from="1600825623855" duration="15000" />
+      <workItem from="1600825623855" duration="18061000" />
+      <workItem from="1601185050155" duration="12007000" />
+      <workItem from="1602210560076" duration="6046000" />
+      <workItem from="1602222722976" duration="24782000" />
+      <workItem from="1602489433224" duration="78576000" />
+      <workItem from="1603072048580" duration="3082000" />
     </task>
     <task id="LOCAL-00001" summary="version_0905">
       <created>1599279212308</created>
@@ -241,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600763151009</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="init segmentation code">
+      <created>1600825764452</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600825764452</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,92 +307,103 @@
     <option name="LAST_COMMIT_MESSAGE" value="init segmentation code" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Deployment" timestamp="1600762739165">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2472" y="178" key="#Deployment" timestamp="1603076747749">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Deployment/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600762739165" />
+    <state x="552" y="178" key="#Deployment/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602225893726" />
+    <state x="2472" y="178" key="#Deployment/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603076747749" />
     <state x="2449" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599811429931">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2449" y="320" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599811429931" />
-    <state width="1607" height="466" key="DebuggerActiveHint" timestamp="1600067469121">
+    <state width="1607" height="466" key="DebuggerActiveHint" timestamp="1602584527085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600067469121" />
-    <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599807923879" />
+    <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602584527085" />
+    <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602488974614" />
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1599214373799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599214373799" />
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom" timestamp="1600825569316">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1603072451990">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602225980531" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603072451990" />
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom" timestamp="1603071457239">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="87" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602839041302" />
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
+    <state width="1877" height="303" key="GridCell.Tab.0.center" timestamp="1603071457239">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="87" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602839041261" />
+    <state width="1877" height="303" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
+    <state width="1877" height="303" key="GridCell.Tab.0.left" timestamp="1603071457239">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="87" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602839041239" />
+    <state width="1877" height="303" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
+    <state width="1877" height="303" key="GridCell.Tab.0.right" timestamp="1603071457239">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="87" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602839041269" />
+    <state width="1877" height="303" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
+    <state width="1877" height="255" key="GridCell.Tab.1.bottom" timestamp="1603071457201">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="255" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602747176874" />
+    <state width="1877" height="255" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457201" />
+    <state width="1877" height="255" key="GridCell.Tab.1.center" timestamp="1603071457200">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="255" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602747176873" />
+    <state width="1877" height="255" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457200" />
+    <state width="1877" height="255" key="GridCell.Tab.1.left" timestamp="1603071457200">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="255" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602747176873" />
+    <state width="1877" height="255" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457200" />
+    <state width="1877" height="255" key="GridCell.Tab.1.right" timestamp="1603071457200">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="255" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602747176874" />
+    <state width="1877" height="255" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457200" />
+    <state x="2521" y="191" key="SettingsEditor" timestamp="1603072425999">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="191" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602642834929" />
+    <state x="2521" y="191" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603072425999" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600826979766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
-    <state width="1877" height="308" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929187" />
-    <state width="1877" height="301" key="GridCell.Tab.0.center" timestamp="1600825569316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
-    <state width="1877" height="308" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929186" />
-    <state width="1877" height="301" key="GridCell.Tab.0.left" timestamp="1600825569316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
-    <state width="1877" height="308" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929186" />
-    <state width="1877" height="301" key="GridCell.Tab.0.right" timestamp="1600825569316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="301" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600825569316" />
-    <state width="1877" height="308" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1600245929187" />
-    <state width="1877" height="402" key="GridCell.Tab.1.bottom" timestamp="1600150556730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="402" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
-    <state width="1877" height="402" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
-    <state width="1877" height="402" key="GridCell.Tab.1.center" timestamp="1600150556730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="402" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
-    <state width="1877" height="402" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
-    <state width="1877" height="402" key="GridCell.Tab.1.left" timestamp="1600150556730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="402" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
-    <state width="1877" height="402" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
-    <state width="1877" height="402" key="GridCell.Tab.1.right" timestamp="1600150556730">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="402" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600150556730" />
-    <state width="1877" height="402" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599815989453" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1600763722475">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600763722475" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1600763182126">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600763182126" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600826979766" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599479194818" />
+    <state x="751" y="404" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1602226000589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="404" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602226000589" />
     <state x="443" y="1" width="1414" height="1027" key="dock-window-1" timestamp="1599479276025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="443" y="1" width="1414" height="1027" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599479276025" />
-    <state x="838" y="250" width="603" height="539" key="ftp.server.browser" timestamp="1600762734871">
+    <state x="838" y="250" width="603" height="539" key="ftp.server.browser" timestamp="1602225999416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="838" y="250" width="603" height="539" key="ftp.server.browser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600762734871" />
+    <state x="838" y="250" width="603" height="539" key="ftp.server.browser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602225999416" />
     <state x="619" y="307" key="git4idea.merge.GitPullDialog" timestamp="1600762962670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="619" y="307" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600762962670" />
-    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600763095558">
+    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1600826508875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600763095558" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599650383331">
+    <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600826508875" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602583749304">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599650383331" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602583749304" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -367,26 +413,42 @@
           <line>2</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/image_utils.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/image_utils.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet_downsample2X.coverage" NAME="unet_downsample2X Coverage Results" MODIFIED="1599647335623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$test_lung_airway_coarse_seg.coverage" NAME="test_lung_airway_coarse_seg Coverage Results" MODIFIED="1599702502327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp.coverage" NAME="temp Coverage Results" MODIFIED="1602829549140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$1_divide_data.coverage" NAME="1_divide_data Coverage Results" MODIFIED="1599559028337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$test_rib_label24_seg.coverage" NAME="test_rib_label24_seg Coverage Results" MODIFIED="1599716225232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$1_data_postprocess.coverage" NAME="1_data_postprocess Coverage Results" MODIFIED="1600242249053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$1_data_postprocess.coverage" NAME="1_data_postprocess Coverage Results" MODIFIED="1602836042165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet_deploy.coverage" NAME="unet_deploy Coverage Results" MODIFIED="1599647278890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare.coverage" NAME="0_data_prepare Coverage Results" MODIFIED="1600245929163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1600656229252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_coarse_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare.coverage" NAME="0_data_prepare Coverage Results" MODIFIED="1602929193899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$download_dicom_from_jianying.coverage" NAME="download_dicom_from_jianying Coverage Results" MODIFIED="1601346816247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1602829232416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/train_temp" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$3_convert_deploy_model.coverage" NAME="3_convert_deploy_model Coverage Results" MODIFIED="1602643131403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$mask_download.coverage" NAME="mask_download Coverage Results" MODIFIED="1602222819490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$0_preprocess.coverage" NAME="0_preprocess Coverage Results" MODIFIED="1599574136432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$2_compute_dice.coverage" NAME="2_compute_dice Coverage Results" MODIFIED="1602927697218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$track_gpu_memory.coverage" NAME="track_gpu_memory Coverage Results" MODIFIED="1599747325870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_utils" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare__1_.coverage" NAME="0_data_prepare (1) Coverage Results" MODIFIED="1599702060099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet_preprocess_deploy.coverage" NAME="unet_preprocess_deploy Coverage Results" MODIFIED="1599647189331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$2_analysis_data.coverage" NAME="2_analysis_data Coverage Results" MODIFIED="1599560485381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test_temp.coverage" NAME="test_temp Coverage Results" MODIFIED="1602727778158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$multi_thread_process.coverage" NAME="multi_thread_process Coverage Results" MODIFIED="1599557300474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_processor" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1600825347876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1599649432680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/copd_synthesis_airway_seg/train" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1600825852097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1602568846839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_processor" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet.coverage" NAME="unet Coverage Results" MODIFIED="1600744079564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network/unet_framework" />
   </component>
 </project>

@@ -1,8 +1,9 @@
 
 import shutil
 import argparse
+import numpy as np
 
-from utils.csv_tools import folder_to_csv, read_csv
+from utils.csv_tools import folder_to_csv, read_csv, csv_to_txt
 from data_processor.data_process import ArgsConfig, PreProcessDataset, LoadData, \
     ProcessCropData, ProcessOriginalData, DataLoaderX
 from data_processor.data_io import DataIO
@@ -11,9 +12,13 @@ from data_processor.data_prepare import divide_train_val_dataset
 parser = argparse.ArgumentParser(description='Data preprocess of rib segmentation')
 parser.add_argument('--dicom_to_nii', type=bool, default=False, help='convert dicom to nii.')
 parser.add_argument('--folder_to_csv', type=bool, default=False, help='convert folder to csv file.')
+parser.add_argument('--csv_to_txt', type=bool, default=False, help='convert csv to txt.')
 parser.add_argument('--preprocess_data', type=bool, default=True, help='preprocess data.')
 parser.add_argument('--divide_dataset', type=bool, default=False, help='divide dataset into train and validation set.')
-parser.add_argument('--copy_dataset', type=bool, default=False, help='copy dataset from source path to destination path.')
+parser.add_argument('--copy_dataset', type=bool, default=False,
+                    help='copy dataset from source path to destination path.')
+parser.add_argument('--merge_rib_centerline_mask', type=bool, default=False,
+                    help='merge the mask of rib and centerline.')
 args = parser.parse_args()
 
 
@@ -42,22 +47,29 @@ if args.folder_to_csv:
     folder_to_csv(data_dir, ".nii.gz", csv_dir, header="seriesUid")
 
 
+# csv to txt
+if args.csv_to_txt:
+    csv_path = "/fileser/zhangfan/DataSet/lung_rib_data/ori_dataset_csv/rib_data_list.csv"
+    txt_path = "/fileser/zhangfan/DataSet/lung_rib_data/ori_dataset_csv/rib_data_list.txt"
+    csv_to_txt(csv_path, txt_path)
+
+
 # preprocess data
 if args.preprocess_data:
     process_args = ArgsConfig().parse()
-    process_args.csv_path = "/fileser/zhangfan/DataSet/lung_rib_data/csv/rib_data_20200813.csv"
+    process_args.csv_path = "/fileser/zhangfan/DataSet/lung_rib_data/csv/val_filename.csv"
     process_args.image_dir = "/fileser/CT_RIB/data/image/res0/"
-    process_args.mask_dir = "/fileser/CT_RIB/data/mask_centerline/alpha_rib_centerline/"
-    process_args.out_image_dir = "/fileser/CT_RIB/data/image_refine/"
-    process_args.out_mask_dir = "/fileser/CT_RIB/data/mask_refine/"
+    process_args.mask_dir = "/fileser/CT_RIB/data/mask_centerline/res0/"
+    process_args.out_image_dir = "/fileser/CT_RIB/data/image_refine/rib_centerline_1015/"
+    process_args.out_mask_dir = "/fileser/CT_RIB/data/mask_refine/rib_centerline_1015/"
     process_args.is_smooth_mask = True
     process_args.is_label1_independent = True
     process_args.is_save_smooth_mask = False
     process_args.label = [2, 2]
     process_args.out_ori_size = []
     process_args.out_ori_spacing = []
-    process_args.out_crop_size = [[224, 160, 224]]
-    process_args.out_crop_spacing = [[1, 1, 1]]
+    process_args.out_crop_size = [[256, 192, 256]]
+    process_args.out_crop_spacing = []
     process_args.out_mask_stride = [1]
 
     dataset = PreProcessDataset(process_args)
@@ -90,3 +102,36 @@ if args.copy_dataset:
         ori_path = source_mask_dir + file_name[0] + ".nii.gz"
         dest_path = destination_mask_dir + file_name[0] + ".nii.gz"
         shutil.copy(ori_path, dest_path)
+
+
+# merge the mask of rib and centerline.
+if args.merge_rib_centerline_mask:
+    csv_path = "/fileser/zhangfan/DataSet/lung_rib_data/csv/rib_data_20200813.csv"
+    rib_dir = "/fileser/CT_RIB/data/mask/res0/"
+    centerline_dir = "/fileser/CT_RIB/data/mask_centerline/alpha_rib_centerline/"
+    res_dir = "/fileser/CT_RIB/data/mask_centerline/res0_old_pipeline/"
+
+    files_list = read_csv(csv_path)[1:]
+    files_list = [item[0] for item in files_list]
+
+    data_loader = DataIO()
+    for idx, file_name in enumerate(files_list):
+        print("the processed number is {}/{}".format(idx, len(files_list)))
+        rib_path = rib_dir + file_name + ".nii.gz"
+        centerline_path = centerline_dir + file_name + ".nii.gz"
+        res_path = res_dir + file_name + ".nii.gz"
+
+        rib_data_dict = data_loader.load_nii_image(rib_path)
+        centerline_data_dict = data_loader.load_nii_image(centerline_path)
+        rid_mask = rib_data_dict["image"]
+        centerline_mask = centerline_data_dict["image"]
+        # centerline_mask[centerline_mask != 2] = 0
+
+        res_mask = np.zeros_like(rid_mask, np.int8)
+        res_mask[rid_mask == 1] = 1
+        res_mask[centerline_mask == 2] = 2
+
+        data_loader.save_medical_info_and_data(res_mask, rib_data_dict["origin"],
+                                               rib_data_dict["spacing"],
+                                               rib_data_dict["direction"],
+                                               res_path)

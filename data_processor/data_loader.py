@@ -1,6 +1,7 @@
 """Dataset loader.
 """
 
+import os
 import torch
 import numpy as np
 from torch.utils.data import Dataset
@@ -36,11 +37,17 @@ class DataSetLoader(Dataset):
         self.window_level = window_level
 
         file_names = read_csv(csv_path)[1:]
-        self.file_names = [item[0] for item in file_names]
+        file_names = [item[0] + ".nii.gz" for item in file_names]
+
+        self.file_names = []
+        for file_name in file_names:
+            file_path = self.image_dir + file_name
+            if os.path.exists(file_path):
+                self.file_names.append(file_name)
 
         if file_exclude_csv:
             exclude_filenames = read_csv(file_exclude_csv)[1:]
-            self.exclude_filenames = [item[0] for item in exclude_filenames]
+            self.exclude_filenames = [item[0] + ".nii.gz" for item in exclude_filenames]
 
             # remove bad case.
             for file_name in self.file_names:

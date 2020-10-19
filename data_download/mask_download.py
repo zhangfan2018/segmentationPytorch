@@ -1,12 +1,13 @@
-import pandas as pd
+
 import os
 import requests
 import subprocess
+import pandas as pd
 
-dir1 = r"D:\DataBase\rib_seg\rib_seg_data_08131\csv"
-img_list= [os.path.join(dir1,f) for f in os.listdir(dir1) if f.startswith('Image_Result')]
+dir1 = r"D:\DataBase\rib_glod_seg_161\csv"
+img_list= [os.path.join(dir1,f) for f in os.listdir(dir1) if f.startswith('image_anno')]
 caselist = img_list
-target_dir = r'D:\DataBase\rib_seg\rib_seg_data_08131\mask'
+target_dir = r'D:\DataBase\rib_glod_seg_161\mask'
 if not os.path.exists(target_dir):
     os.mkdir(target_dir)
 
@@ -17,7 +18,7 @@ for f in caselist[1:]:
     df_all = pd.concat([df_all, df])
 print(df_all.shape)
 
-rename_dict = {'影像结果':'gt_result', '序列号':'uid'}
+rename_dict = {'影像结果': 'gt_result', '序列编号': 'uid'}
 df_all = df_all.rename(columns=rename_dict)
 uids = df_all['uid'].drop_duplicates().values
 os.chdir(target_dir)

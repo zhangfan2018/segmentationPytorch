@@ -19,7 +19,7 @@ from prefetch_generator import BackgroundGenerator
 
 from utils.csv_tools import read_csv
 from data_processor.data_io import DataIO
-from utils.mask_utils import smooth_mask
+from utils.mask_utils import smooth_mask, smooth_centroid_line
 from utils.image_utils import crop_image_mask
 from utils.mask_utils import extract_left_right_bbox
 
@@ -44,7 +44,7 @@ class ArgsConfig:
         parser.add_argument('--data_suffix', type=str, default=".nii.gz", choices=('.nii.gz', '.nrrd', 'mha'))
         parser.add_argument('--label', type=list, default=[1, 1], help='the label of original and cropped mask.')
         parser.add_argument('--is_smooth_mask', type=bool, default=False, help='whether smoothing original mask')
-        parser.add_argument('--extend_size', type=int, default=15,
+        parser.add_argument('--extend_size', type=int, default=20,
                             help='the size of extend boundary when crop image and mask.')
         parser.add_argument('--cut_patch_mode', type=str, default="bbox", choices=('bbox', 'centroid'),
                             help="the mode of cutting patch when cut image and mask into patch.")
@@ -166,6 +166,8 @@ class ProcessOriginalData:
                 if args.is_label1_independent:
                     if i == 1:
                         t_mask = smooth_mask(t_mask, area_least=1000, is_binary_close=True)
+                    if i == 2:
+                        t_mask = smooth_centroid_line(t_mask, area_least=300, dilation_itrs=1)
                 else:
                     t_mask = smooth_mask(t_mask, area_least=1000, is_binary_close=True)
                 t_smooth_mask[t_mask != 0] = i

@@ -44,7 +44,7 @@ ${SEG_ROOT}
 ### Training and Test
 * The shell of distribution training
 ````
-nohup python -m torch.distributed.launch --nproc_per_node=4 --master_port 29502 train.py &
+nohup python -m torch.distributed.launch --nproc_per_node=4 --master_port 29503 train.py &
 ````
 
 ## Experiments

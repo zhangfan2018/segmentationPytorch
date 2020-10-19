@@ -76,5 +76,5 @@ class Download(object):
 
 if __name__ == '__main__':
     download = Download(
-        url_file='/fileser/zhangfan/DataSet/airway_segment_data/csv/data_url_1.xlsx')
+        url_file='/fileser/zhangfan/DataSet/airway_segment_data/csv/data_url_3.xlsx')
     download()

@@ -23,8 +23,8 @@ net_config = {"num_class": 2,
               "use_checkpoint": False}
 
 args = ModelOptions("segmentation of rib and centerline").parse()
-args.image_dir = "/fileser/CT_RIB/data/image_refine/crop_224_160_224/"
-args.mask_dir = "/fileser/CT_RIB/data/mask_refine/crop_224_160_224/"
+args.image_dir = "/fileser/CT_RIB/data/image_refine/rib_centerline_1015/crop_224_160_224/"
+args.mask_dir = "/fileser/CT_RIB/data/mask_refine/rib_centerline_1015/crop_224_160_224/"
 args.train_dataset = "/fileser/zhangfan/DataSet/lung_rib_data/csv/train_filename_all.csv"
 args.val_dataset = "/fileser/zhangfan/DataSet/lung_rib_data/csv/val_filename_all.csv"
 args.label = ["rib", "centerline"]
@@ -32,9 +32,9 @@ args.num_classes = 2
 args.batch_size = 1
 args.n_workers = 4
 args.lr = 1e-3
-args.epochs = 300
+args.epochs = 200
 args.mode = "train"
-args.out_dir = "./output/rib_centerline_fine_seg"
+args.out_dir = "./output/rib_centerline_fine_seg_num512_size224"
 exclude_csv = "/fileser/zhangfan/DataSet/lung_rib_data/csv/bad_case.csv"
 
 

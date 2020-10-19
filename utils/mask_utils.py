@@ -58,7 +58,7 @@ def extract_bbox(mask):
 
 
 def dilation_mask(mask, itrs=2):
-    struct = generate_binary_structure(3, 2)
+    struct = generate_binary_structure(3, 1)
     dilated_mask = binary_dilation(mask, structure=struct, iterations=itrs)
     return dilated_mask
 
@@ -158,6 +158,22 @@ def smooth_mask(mask, area_least=10, is_binary_close=False):
     if is_binary_close:
         struct = generate_binary_structure(3, 2)
         mask = binary_closing(mask, structure=struct, iterations=3)
+    mask = mask.astype(np.uint8)
+
+    return mask
+
+
+def smooth_centroid_line(mask, area_least=10, dilation_itrs=2):
+    """smooth centroid line of rib mask by remove small connected object and dilation object"""
+    """
+    Args:
+        mask(numpy array): mask array.
+        area_least(int): remain the connected objects that area exceed this threshold.
+        dilation_itrs: the iteration number of dilation mask.
+    """
+    mask = mask.astype(np.uint8)
+    mask = remove_small_connected_object(mask, area_least)
+    mask = dilation_mask(mask, itrs=dilation_itrs)
     mask = mask.astype(np.uint8)
 
     return mask
