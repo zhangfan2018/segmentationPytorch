@@ -23,7 +23,7 @@ class ModelOptions:
         parser.add_argument('--batch_size', type=int, default=1, help='size of batch')
         parser.add_argument('--n_workers', type=int, default=4, help="number of workers in cpu")
         parser.add_argument('--epochs', type=int, default=60, help='number of epochs to train')
-        parser.add_argument('--gpu_ids', type=str, default='0, 1, 2, 3', help='gpu ids: e.g. 0,1. use -1 for CPU')
+        parser.add_argument('--gpu_ids', type=str, default='4, 5, 6, 7', help='gpu ids: e.g. 0,1. use -1 for CPU')
         parser.add_argument('--out_dir', type=str, default='./output', help='output information is saved here')
 
         # optional parameter.
@@ -32,7 +32,7 @@ class ModelOptions:
         parser.add_argument('--activation', type=str, default="sigmoid", choices=('sigmoid', 'softmax'))
         parser.add_argument('--start_epoch', default=0, type=int, help='manual epoch number (useful on restarts)')
         parser.add_argument('--lr', type=float, default=1e-3, help='learning rate')
-        parser.add_argument('--lr_scheduler', type=str, default="stepLR", help='learning rate scheduler')
+        parser.add_argument('--lr_scheduler', type=str, default="cosineLR", help='learning rate scheduler')
         parser.add_argument('--l2_penalty', type=float, default=5e-5, help='L2 penalty for avoiding over-fitting')
         parser.add_argument('--opt', type=str, default='adam', choices=('sgd', 'adam'))
         parser.add_argument('--task', type=str, default="single", choices=('single', 'multi'))

@@ -42,8 +42,8 @@ if args.dicom_to_nii:
 
 # folder to csv file
 if args.folder_to_csv:
-    data_dir = "/fileser/CT_RIB/data/mask/rib_label_res0/"
-    csv_dir = "/fileser/zhangfan/DataSet_1/rib_centerline_data/csv/rib_label_all.csv"
+    data_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/mask/rib_centerline_mask/"
+    csv_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/csv/rib_all_filename.csv"
     folder_to_csv(data_dir, ".nii.gz", csv_dir, header="seriesUid")
 
 
@@ -57,18 +57,18 @@ if args.csv_to_txt:
 # preprocess data
 if args.preprocess_data:
     process_args = ArgsConfig().parse()
-    process_args.csv_path = "/fileser/zhangfan/DataSet/lung_rib_data/csv/val_filename.csv"
+    process_args.csv_path = "/fileser/zhangfan/DataSet/pipeline_rib_mask/csv/rib_all_filename.csv"
     process_args.image_dir = "/fileser/CT_RIB/data/image/res0/"
-    process_args.mask_dir = "/fileser/CT_RIB/data/mask_centerline/res0/"
-    process_args.out_image_dir = "/fileser/CT_RIB/data/image_refine/rib_centerline_1015/"
-    process_args.out_mask_dir = "/fileser/CT_RIB/data/mask_refine/rib_centerline_1015/"
+    process_args.mask_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/mask/rib_centerline_mask/"
+    process_args.out_image_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/image_refine/"
+    process_args.out_mask_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/mask_refine/"
     process_args.is_smooth_mask = True
     process_args.is_label1_independent = True
     process_args.is_save_smooth_mask = False
-    process_args.label = [2, 2]
-    process_args.out_ori_size = []
+    process_args.label = [1, 2]
+    process_args.out_ori_size = [[128, 128, 128]]
     process_args.out_ori_spacing = []
-    process_args.out_crop_size = [[256, 192, 256]]
+    process_args.out_crop_size = [[224, 160, 224]]
     process_args.out_crop_spacing = []
     process_args.out_mask_stride = [1]
 
@@ -77,7 +77,7 @@ if args.preprocess_data:
     dataset.set_pipeline(list_element)
 
     data_loader = DataLoaderX(
-        dataset=dataset, batch_size=1, num_workers=8, shuffle=False)
+        dataset=dataset, batch_size=1, num_workers=12, shuffle=False)
 
     for index, flag in enumerate(data_loader):
         pass
@@ -85,9 +85,9 @@ if args.preprocess_data:
 
 # divide dataset into train and validation
 if args.divide_dataset:
-    dataset_csv_path = "/fileser/zhangfan/DataSet_1/rib_centerline_data/csv/rib_label_all.csv"
-    train_set_csv_path = "/fileser/zhangfan/DataSet_1/rib_centerline_data/csv/rib_label_train.csv"
-    val_set_csv_path = "/fileser/zhangfan/DataSet_1/rib_centerline_data/csv/rib_label_val.csv"
+    dataset_csv_path = "/fileser/zhangfan/DataSet/pipeline_rib_mask/csv/rib_all_filename.csv"
+    train_set_csv_path = "/fileser/zhangfan/DataSet/pipeline_rib_mask/csv/train_filename.csv"
+    val_set_csv_path = "/fileser/zhangfan/DataSet/pipeline_rib_mask/csv/val_filename.csv"
     divide_train_val_dataset(dataset_csv_path, train_set_csv_path, val_set_csv_path, ratio=0.8)
 
 

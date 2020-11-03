@@ -23,8 +23,8 @@ net_config = {"num_class": 1,
               "use_checkpoint": False}
 
 args = ModelOptions("segmentation of rib").parse()
-args.image_dir = "/fileser/CT_RIB/data/image_refine/ori_128_128_128/"
-args.mask_dir = "/fileser/CT_RIB/data/mask_refine/ori_128_128_128/"
+args.image_dir = "/fileser/CT_RIB/data/image_refine/rib_centerline_1015/ori_160_160_160/"
+args.mask_dir = "/fileser/CT_RIB/data/mask_refine/rib_centerline_1015/ori_160_160_160/"
 args.train_dataset = "/fileser/zhangfan/DataSet/lung_rib_data/csv/train_filename_all.csv"
 args.val_dataset = "/fileser/zhangfan/DataSet/lung_rib_data/csv/val_filename_all.csv"
 args.label = ["rib"]
@@ -32,9 +32,9 @@ args.num_classes = 1
 args.batch_size = 3
 args.n_workers = 4
 args.lr = 3e-3
-args.epochs = 800
+args.epochs = 200
 args.mode = "train"
-args.out_dir = "./output/rib_coarse_seg_fourLayerConv"
+args.out_dir = "./output/rib_coarse_seg_num512_size160"
 
 
 # --------------------------------------------Init--------------------------------------------------------- #

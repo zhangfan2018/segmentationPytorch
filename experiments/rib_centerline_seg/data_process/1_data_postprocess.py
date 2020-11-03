@@ -14,9 +14,9 @@ from runner.metric import compute_dice
 
 
 parser = argparse.ArgumentParser(description='Data postprocess of rib segmentation')
-parser.add_argument('--analysis_seg_result', type=bool, default=True, help='analysis segmentation result.')
+parser.add_argument('--analysis_seg_result', type=bool, default=False, help='analysis segmentation result.')
 parser.add_argument('--process_seg_result', type=bool, default=False, help='process segmentation result.')
-parser.add_argument('--compute_seg_dice', type=bool, default=False, help='compute the dice of rib mask.')
+parser.add_argument('--compute_seg_dice', type=bool, default=True, help='compute the dice of rib mask.')
 args = parser.parse_args()
 
 
@@ -188,7 +188,7 @@ if args.process_seg_result:
 
 if args.compute_seg_dice:
     # /fileser/CT_RIB/alpha_result/483_rule_label
-    predict_dir = "/fileser/zhangfan/DataSet/lung_rib_data/alpha_ribCenterlineSeg_twoStage/test_161/rib_original/rib/"
+    predict_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/test_mask/"
     gt_dir = "/fileser/zhangfan/DataSet/lung_rib_data/test_data/ann_no_verify/mask/"
     csv_path = "/fileser/zhangfan/DataSet/lung_rib_data/test_data/csv/test_161.csv"
     result_path = "/fileser/zhangfan/DataSet/lung_rib_data/test_data/csv/seg_result.csv"

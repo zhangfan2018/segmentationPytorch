@@ -1,11 +1,7 @@
+import shutil
 
-from data_processor.data_loader import DataIO
+ori_path = "/fileser/CT_RIB/data/image/res0/1.2.392.200036.9116.2.5.1.37.2424352877.1451950214.279755.nii.gz"
+dest_path = "/fileser/zhangfan/DataSet/vertebra_location_dataset/bad_case/" \
+            "image/1.2.392.200036.9116.2.5.1.37.2424352877.1451950214.279755.nii.gz"
 
-image_dir = "/fileser/DATA/IMAGE/DICOM/1.2.840.113619.2.55.3.269126727.996.1519824993.105.3"
-res_dir = "/fileser/test/bad_case_result/image/1.2.840.113619.2.55.3.269126727.996.1519824993.105.3.nii.gz"
-
-data_loader = DataIO()
-image_dict = data_loader.load_dicom_series(image_dir)
-data_loader.save_medical_info_and_data(image_dict["image"], image_dict["origin"],
-                                       image_dict["spacing"], image_dict["direction"],
-                                       res_dir)
+shutil.copy(ori_path, dest_path)

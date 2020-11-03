@@ -26,8 +26,8 @@ args = ModelOptions("segmentation of rib").parse()
 args.image_dir = "/fileser/CT_RIB/data/image_refine/rib_centerline_1015/crop_res1_1_1/"
 args.mask_dir = "/fileser/CT_RIB/data/mask_refine/rib_centerline_1015/crop_res1_1_1/"
 args.val_dataset = "/fileser/zhangfan/DataSet/lung_rib_data/csv/val_filename.csv"
-args.weight_dir = "/fileser/zhangfan/LungProject/lung_segment/experiments/rib_centerline_seg/rib_centerline_fine_seg" \
-                  "/output/rib_centerline_fine_seg/models_2020-09-21_18-36-25/models/model_300.pt"
+args.weight_dir = "/fileser/zhangfan/LungProject/lung_segment/experiments/rib_centerline_seg/rib_centerline_fine_seg/" \
+                  "output/rib_fine_seg_1029/models_2020-10-29_19-13-03/models/model_149.pt"
 args.label = ["rib", "centerline"]
 args.num_classes = 2
 args.batch_size = 1
@@ -37,7 +37,7 @@ args.is_save_script_model = True
 args.is_fp16 = True
 args.is_save_mask = False
 args.is_upsample_mask = False
-args.out_dir = "/fileser/zhangfan/models_zoo/fine_rib_seg_tmp/fine_rib_num512_size224_block4"
+args.out_dir = "/fileser/zhangfan/models_zoo/fine_rib_seg_tmp/model_1102"
 args.gpu_ids = "2"
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu_ids
 exclude_csv = "/fileser/zhangfan/DataSet/lung_rib_data/csv/bad_case.csv"

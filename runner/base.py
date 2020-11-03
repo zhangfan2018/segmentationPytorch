@@ -139,6 +139,12 @@ class BaseModel:
         """lr scheduler in pytorch."""
         if self.args.lr_scheduler == "stepLR":
             self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=60, gamma=0.5)
+        elif self.args.lr_scheduler == "cosineLR":
+            self.scheduler = optim.lr_scheduler.CosineAnnealingLR(self.optimizer, T_max=30, eta_min=3e-5)
+        # TODO
+        # elif self.args.lr_scheduler == "reduceLR":
+        #     self.scheduler = optim.lr_scheduler.ReduceLROnPlateau(self.optimizer,)
+
 
     def get_rank(self):
         """get gpu id in distribution training."""

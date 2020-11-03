@@ -64,7 +64,7 @@ class SegmentationModel(BaseModel):
             train_writer = SummaryWriter(log_dir=os.path.join(self.log_dir, 'train'))
             val_writer = SummaryWriter(log_dir=os.path.join(self.log_dir, 'val'))
 
-        self.get_lr_scheduler()
+        # self.get_lr_scheduler()
 
         if torch.cuda.device_count() > 1:
             if not self.args.is_distributed_train:
@@ -83,6 +83,7 @@ class SegmentationModel(BaseModel):
                 self.logger.info('starting training epoch {}'.format(epoch))
             for param_group in self.optimizer.param_groups:
                 param_group['lr'] = self.get_lr(epoch, self.args.epochs, self.lr)
+            # self.scheduler.step()
 
             self.network.train()
 

@@ -156,7 +156,8 @@ class ProcessOriginalData:
 
         if args.is_smooth_mask:
             t_smooth_mask = np.zeros_like(mask_zyx)
-            for i in range(1, args.label[0] + 1):
+            label_num = np.max(np.array(args.label))
+            for i in range(1, label_num + 1):
                 t_mask = mask_zyx.copy()
                 if i == 1 and args.is_label1_independent:
                     t_mask[t_mask != 0] = 1
@@ -167,7 +168,7 @@ class ProcessOriginalData:
                     if i == 1:
                         t_mask = smooth_mask(t_mask, area_least=1000, is_binary_close=True)
                     if i == 2:
-                        t_mask = smooth_centroid_line(t_mask, area_least=300, dilation_itrs=1)
+                        t_mask = smooth_centroid_line(t_mask, area_least=200, dilation_itrs=1)
                 else:
                     t_mask = smooth_mask(t_mask, area_least=1000, is_binary_close=True)
                 t_smooth_mask[t_mask != 0] = i

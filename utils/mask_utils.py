@@ -173,7 +173,7 @@ def smooth_centroid_line(mask, area_least=10, dilation_itrs=2):
     """
     mask = mask.astype(np.uint8)
     mask = remove_small_connected_object(mask, area_least)
-    mask = dilation_mask(mask, itrs=dilation_itrs)
+    # mask = dilation_mask(mask, itrs=dilation_itrs)
     mask = mask.astype(np.uint8)
 
     return mask
