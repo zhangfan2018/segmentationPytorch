@@ -22,6 +22,7 @@ def set_requires_grad(model):
 
 def convert_model_to_torchscript(model, dummy_input, save_path):
     set_requires_grad(model)
+    model.eval()
     traced_script_module = torch.jit.trace(model, dummy_input)
     print(traced_script_module.code)
     traced_script_module.save(save_path)
@@ -33,6 +34,7 @@ if __name__ == "__main__":
     model = UNet()
     model = load_model_weights(model, model_dir)
     model = model.cuda()
+    model.eval()
     dummy_input = torch.rand(1, 1, 128, 128, 128).float().cuda()
     convert_model_to_torchscript(model, dummy_input, save_dir)
 

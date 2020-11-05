@@ -58,7 +58,7 @@ def extract_bbox(mask):
 
 
 def dilation_mask(mask, itrs=2):
-    struct = generate_binary_structure(3, 1)
+    struct = generate_binary_structure(3, 2)
     dilated_mask = binary_dilation(mask, structure=struct, iterations=itrs)
     return dilated_mask
 
