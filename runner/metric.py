@@ -29,7 +29,7 @@ class DiceMetric(nn.Module):
             pred[pred < 0.5] = 0
             pred[pred >= 0.5] = 1
         elif activation == "softmax":
-            pred = torch.argmax(predict, dim=1)
+            pred = F.softmax(predict, dim=1)
 
         intersection = torch.sum(pred * gt, dim=self.dims)
         union = torch.sum(pred, dim=self.dims) + torch.sum(gt, dim=self.dims)
@@ -44,7 +44,7 @@ def compute_dice(predict, gt):
     gt = gt.astype(np.float)
     intersection = np.sum(predict * gt)
     union = np.sum(predict + gt)
-    dice = 2.000 * intersection / (union + 1e-5)
+    dice = (2. * intersection + 1e-5) / (union + 1e-5)
 
     return dice
 

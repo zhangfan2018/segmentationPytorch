@@ -314,7 +314,7 @@ class SegmentationModel(BaseModel):
             pred_mask_czyx = pred_mask_czyx.cpu().numpy().squeeze()
             pred_mask_czyx[pred_mask_czyx >= 0.5] = 1
             pred_mask_czyx[pred_mask_czyx < 0.5] = 0
-            pred_mask_czyx = pred_mask_czyx[np.newaxis, ] if self.args.num_classes == 1 else pred_mask_czyxl
+            pred_mask_czyx = pred_mask_czyx[np.newaxis, ] if self.args.num_classes == 1 else pred_mask_czyx
             pred_mask_zyx = np.zeros(pred_mask_czyx.shape[1:], dtype=np.int8)
             for i in range(self.args.num_classes):
                 out_mask = pred_mask_czyx[i, ].squeeze()
