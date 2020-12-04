@@ -10,11 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="update version-2020.11.3">
+    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="update version-2020.12.01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/temp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/metric.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processor/data_resample.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processor/data_resample.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,29 +45,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.temp">
-    <configuration name="0_data_prepare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="segmentationPytorch" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/0_data_prepare.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.3_convert_deploy_model">
     <configuration name="1_data_postprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,6 +60,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/1_data_postprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="3_convert_deploy_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="segmentationPytorch" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/3_convert_deploy_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -160,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.3_convert_deploy_model" />
         <item itemvalue="Python.temp" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.1_data_postprocess" />
         <item itemvalue="Python.test (1)" />
-        <item itemvalue="Python.0_data_prepare" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +192,10 @@
       <workItem from="1604886314603" duration="7581000" />
       <workItem from="1605075350012" duration="5214000" />
       <workItem from="1605255828408" duration="8680000" />
-      <workItem from="1606187448708" duration="3894000" />
+      <workItem from="1606187448708" duration="13249000" />
+      <workItem from="1606728640311" duration="6043000" />
+      <workItem from="1606877349565" duration="1778000" />
+      <workItem from="1607055227520" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="version_0905">
       <created>1599279212308</created>
@@ -280,7 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604388724513</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update version-2020.11.24">
+      <created>1606200288645</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606200288645</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update version-2020.12.01">
+      <created>1606786751322</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1606786751322</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +325,9 @@
     <MESSAGE value="init segmentation code" />
     <MESSAGE value="update version-2020.10.19" />
     <MESSAGE value="update version-2020.11.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="update version-2020.11.3" />
+    <MESSAGE value="update version-2020.11.24" />
+    <MESSAGE value="update version-2020.12.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="update version-2020.12.01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="178" key="#Deployment" timestamp="1603076747749">
@@ -331,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599214373799" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605075360716">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606201186847">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605075360716" />
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606201186847" />
     <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603072451990" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1604638534290">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -420,16 +437,6 @@
           <line>2</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/image_utils.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/image_utils.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -444,7 +451,7 @@
     <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare.coverage" NAME="0_data_prepare Coverage Results" MODIFIED="1603948222189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$download_dicom_from_jianying.coverage" NAME="download_dicom_from_jianying Coverage Results" MODIFIED="1601346816247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1604369797899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$3_convert_deploy_model.coverage" NAME="3_convert_deploy_model Coverage Results" MODIFIED="1602643131403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$3_convert_deploy_model.coverage" NAME="3_convert_deploy_model Coverage Results" MODIFIED="1606786617280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$mask_download.coverage" NAME="mask_download Coverage Results" MODIFIED="1602222819490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$0_preprocess.coverage" NAME="0_preprocess Coverage Results" MODIFIED="1599574136432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$2_compute_dice.coverage" NAME="2_compute_dice Coverage Results" MODIFIED="1602927697218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />

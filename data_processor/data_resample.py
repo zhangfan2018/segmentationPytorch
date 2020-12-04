@@ -37,7 +37,7 @@ class DataResampler(object):
         """resample mask to fixed size"""
         scale = np.array(out_size) / mask.shape
         zoom_factor = mask.shape / np.array(out_size)
-        mask_zoom = np.zeros_like(mask)
+        mask_zoom = np.zeros(out_size, np.uint8)
         for i in range(1, num_label+1):
             t_mask = mask.copy()
             t_mask[t_mask != i] = 0
@@ -70,7 +70,9 @@ class DataResampler(object):
         """resample mask to fixed spacing"""
         scale = np.array(ori_spacing) / np.array(out_spacing)
         zoom_factor = np.array(out_spacing) / np.array(ori_spacing)
-        mask_zoom = np.zeros_like(mask)
+        input_size = mask.shape
+        out_size = [int(input_size[i] * scale[i]) for i in range(3)]
+        mask_zoom = np.zeros(out_size, np.uint8)
         for i in range(1, num_label+1):
             t_mask = mask.copy()
             t_mask[t_mask != i] = 0
@@ -89,7 +91,9 @@ class DataResampler(object):
 
     def resampleMaskToFixedScale(self, mask, scale, num_label, order=1):
         """resmaple mask to fixed scale"""
-        mask_zoom = np.zeros_like(mask)
+        input_size = mask.shape
+        out_size = [int(input_size[i] * scale[i]) for i in range(3)]
+        mask_zoom = np.zeros(out_size, np.uint8)
         for i in range(1, num_label+1):
             t_mask = mask.copy()
             t_mask[t_mask != i] = 0
