@@ -179,6 +179,27 @@ def smooth_centroid_line(mask, area_least=10, dilation_itrs=2):
     return mask
 
 
+def extract_candidates_bbox(mask, area_least=10):
+    """extract the bounding box of candidates in mask."""
+    # connected region analysis.
+    mask[mask != 0] = 1
+    labeled_mask, num = label(mask, neighbors=8, background=0, return_num=True)
+    region_props = measure.regionprops(labeled_mask)
+
+    candidates = []
+    for i in range(num):
+        props = region_props[i]
+        area = props.area
+        bbox = props.bbox
+        centroid = props.centroid
+        if area > area_least:
+            candidate = {"centroid": centroid,
+                         "bbox": bbox}
+            candidates.append(candidate)
+
+    return candidates
+
+
 def extract_left_right_bbox(mask):
     """extract the left and right lung box"""
     # connected region analysis.

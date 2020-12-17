@@ -2,6 +2,7 @@
 import os
 import datetime
 import numpy as np
+from tqdm import tqdm
 
 import torch
 import torch.nn.functional as F
@@ -15,7 +16,7 @@ from utils.csv_tools import write_csv
 from runner.loss import DiceLoss, BCELoss
 from runner.base import BaseModel, DataLoaderX
 from runner.metric import DiceMetric
-from utils.mask_utils import smooth_mask
+from utils.mask_utils import smooth_mask, extract_candidates_bbox
 from data_processor.data_io import DataIO
 
 
@@ -141,14 +142,12 @@ class SegmentationModel(BaseModel):
                         epoch, self.args.epochs, index * len(images), len(train_loader.dataset), 100. * index / len(train_loader)))
                         train_writer.add_scalar('Train/SegLoss', seg_loss.item(), train_epoch)
                         self.logger.info('SegLoss:{:.6f}'.format(seg_loss.item()))
-                    if self.args.task == "multi":
-                        if self.is_print_out:
+                        if self.args.task == "multi":
                             train_writer.add_scalar('Train/BoundaryLoss', boundary_loss.item(), train_epoch)
                             self.logger.info('BoundaryLoss:{:.6f}'.format(boundary_loss.item()))
 
-                    for i, dice_label in enumerate(dice):
-                        dice_ind = dice_label / total
-                        if self.is_print_out:
+                        for i, dice_label in enumerate(dice):
+                            dice_ind = dice_label / total
                             train_writer.add_scalars('Train/Dice', {self.args.label[i]: dice_ind}, train_epoch)
                             self.logger.info('{} Dice:{:.6f}'.format(self.args.label[i], dice_ind))
 
@@ -158,8 +157,7 @@ class SegmentationModel(BaseModel):
                 val_writer.add_scalar('Val/Loss', val_loss, val_epoch)
                 total_dice = 0
                 for i, _ in enumerate(val_dice):
-                    if self.is_print_out:
-                        val_writer.add_scalars('Val/Dice', {self.args.label[i]: val_dice[i]}, val_epoch)
+                    val_writer.add_scalars('Val/Dice', {self.args.label[i]: val_dice[i]}, val_epoch)
                     total_dice += val_dice[i]
                 total_dice /= len(val_dice)
 
@@ -169,7 +167,7 @@ class SegmentationModel(BaseModel):
                     self.save_weights(epoch, self.network.state_dict(), self.optimizer.state_dict())
                 else:
                     self.metric_non_improve_epoch += 1
-            if self.is_print_out:
+
                 self.logger.info('\nEnd of epoch {}, time: {}'.format(epoch, datetime.datetime.now() - start_time))
 
         if self.is_print_out:
@@ -243,9 +241,8 @@ class SegmentationModel(BaseModel):
         if self.is_print_out:
             self.logger.info('the loss of validation is {}'.format(val_loss))
 
-        for idx, _ in enumerate(dice):
-            dice[idx] /= total
-            if self.is_print_out:
+            for idx, _ in enumerate(dice):
+                dice[idx] /= total
                 self.logger.info('{} Dice:{:.6f}'.format(self.args.label[idx], dice[idx]))
 
         return val_loss, dice
@@ -334,3 +331,117 @@ class SegmentationModel(BaseModel):
         for idx, _ in enumerate(dice):
             dice[idx] /= len(test_dataset)
             self.logger.info('the average of {} Dice:{:.6f}'.format(self.args.label[idx], dice[idx]))
+
+    def test_frac_seg(self, test_dataset):
+        """test procedure."""
+        self.network.eval()
+
+        csv_path = os.path.join(self.args.out_dir, 'infer_result.csv')
+        contents = ['uid', 'coordX', 'coordY', 'coordZ',
+                    'detector_diameterX', 'detector_diameterY', 'detector_diameterZ',
+                    'boneNo', 'boneType', 'frac_type', 'det_probability']
+        write_csv(csv_path, contents, mul=False, mod="w")
+
+        self.logger.info('starting test')
+        self.logger.info('the number of test dataset: {}'.format(len(test_dataset)))
+
+        for data_dict in tqdm(test_dataset):
+            uid = data_dict["uid"]
+            image_bczyx = data_dict["image"]
+            crop_bbox = data_dict["crop_bbox"]
+            zoom_factor = data_dict["zoom_factor"]
+            if self.args.cuda:
+                image_bczyx = image_bczyx.cuda()
+
+            with torch.no_grad():
+                output_seg = self.network(image_bczyx)
+
+            output_seg = F.sigmoid(output_seg)
+            output_seg = output_seg.cpu().numpy().squeeze()
+            output_seg[output_seg >= 0.5] = 1
+            output_seg[output_seg < 0.5] = 0
+
+            all_candidates = extract_candidates_bbox(output_seg, area_least=10)
+            for candidate in all_candidates:
+                centroid = candidate["centroid"]
+                bbox = candidate["bbox"]
+                raw_centroid = [centroid[i]*zoom_factor[i]+crop_bbox[i] for i in range(3)]
+                raw_diameter = [(bbox[3]-bbox[0])*zoom_factor[0],
+                                (bbox[4]-bbox[1])*zoom_factor[1],
+                                (bbox[5]-bbox[2])*zoom_factor[2]]
+                contents = [uid, raw_centroid[2], raw_centroid[1], raw_centroid[0],
+                            raw_diameter[2], raw_diameter[1], raw_diameter[0],
+                            -1, -1, -1, 1]
+                write_csv(csv_path, contents, mul=False, mod="a+")
+
+    def test_frac_patch_seg(self, test_dataset):
+        """test procedure."""
+        self.network.eval()
+        self.network = self.network.half()
+
+        csv_path = os.path.join(self.args.out_dir, 'infer_result.csv')
+        contents = ['uid', 'coordX', 'coordY', 'coordZ',
+                    'detector_diameterX', 'detector_diameterY', 'detector_diameterZ',
+                    'boneNo', 'boneType', 'frac_type', 'det_probability', 'candidate_type']
+        write_csv(csv_path, contents, mul=False, mod="w")
+
+        self.logger.info('starting test')
+        self.logger.info('the number of test dataset: {}'.format(len(test_dataset)))
+
+        for data_dict in tqdm(test_dataset):
+            uid = data_dict["uid"]
+            candidates = data_dict["candidates"]
+            image_shape = data_dict["image_shape"]
+            zoom_factor = data_dict["zoom_factor"]
+            batch_num = 120
+            images = []
+            output_seg = []
+            for index, candidate in enumerate(candidates):
+                if index % batch_num == 0:
+                    images = []
+                image = candidate["image"]
+                images.append(image)
+
+                if len(images) == batch_num or index == len(candidates) - 1:
+                    images = np.stack(images, axis=0)
+                    images = torch.from_numpy(images).float().half()
+                    if self.args.cuda:
+                        images = images.cuda()
+
+                    with torch.no_grad():
+                        batch_output = self.network(images)
+                    output_seg.append(batch_output)
+
+            output_seg = torch.cat(output_seg, 0)
+            output_seg = F.sigmoid(output_seg)
+            output_seg = output_seg.cpu().numpy().squeeze()
+            output_seg[output_seg >= 0.5] = 1
+            output_seg[output_seg < 0.5] = 0
+
+            mask = np.zeros(image_shape, np.uint8)
+            for i in range(len(candidates)):
+                out_candidate_seg = output_seg[i, ...].squeeze()
+                crop_bbox = candidates[i]["crop_bbox"]
+                part_mask_ori = mask[crop_bbox[0]:crop_bbox[1],
+                                     crop_bbox[2]:crop_bbox[3],
+                                     crop_bbox[4]:crop_bbox[5]]
+                part_mask_dst = out_candidate_seg[:crop_bbox[1]-crop_bbox[0],
+                                                  :crop_bbox[3]-crop_bbox[2],
+                                                  :crop_bbox[5]-crop_bbox[4]]
+                part_mask_ori[part_mask_dst != 0] = 1
+                mask[crop_bbox[0]:crop_bbox[1],
+                     crop_bbox[2]:crop_bbox[3],
+                     crop_bbox[4]:crop_bbox[5]] = part_mask_ori
+
+            all_candidates = extract_candidates_bbox(mask, area_least=10)
+            for candidate in all_candidates:
+                centroid = candidate["centroid"]
+                bbox = candidate["bbox"]
+                raw_centroid = [centroid[i] * zoom_factor[i] for i in range(3)]
+                raw_diameter = [(bbox[3] - bbox[0]) * zoom_factor[0],
+                                (bbox[4] - bbox[1]) * zoom_factor[1],
+                                (bbox[5] - bbox[2]) * zoom_factor[2]]
+                contents = [uid, raw_centroid[2], raw_centroid[1], raw_centroid[0],
+                            raw_diameter[2], raw_diameter[1], raw_diameter[0],
+                            -1, -1, -1, 1, -1]
+                write_csv(csv_path, contents, mul=False, mod="a+")

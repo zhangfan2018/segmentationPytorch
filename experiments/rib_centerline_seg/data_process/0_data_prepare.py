@@ -1,9 +1,11 @@
 
+import os
 import shutil
 import argparse
 import numpy as np
+from tqdm import tqdm
 
-from utils.csv_tools import folder_to_csv, read_csv, csv_to_txt
+from utils.csv_tools import folder_to_csv, read_csv, csv_to_txt, write_csv, write_to_csv
 from data_processor.data_process import ArgsConfig, PreProcessDataset, LoadData, \
     ProcessCropData, ProcessOriginalData, DataLoaderX
 from data_processor.data_io import DataIO
@@ -13,12 +15,14 @@ parser = argparse.ArgumentParser(description='Data preprocess of rib segmentatio
 parser.add_argument('--dicom_to_nii', type=bool, default=False, help='convert dicom to nii.')
 parser.add_argument('--folder_to_csv', type=bool, default=False, help='convert folder to csv file.')
 parser.add_argument('--csv_to_txt', type=bool, default=False, help='convert csv to txt.')
-parser.add_argument('--preprocess_data', type=bool, default=True, help='preprocess data.')
+parser.add_argument('--preprocess_data', type=bool, default=False, help='preprocess data.')
 parser.add_argument('--divide_dataset', type=bool, default=False, help='divide dataset into train and validation set.')
 parser.add_argument('--copy_dataset', type=bool, default=False,
                     help='copy dataset from source path to destination path.')
 parser.add_argument('--merge_rib_centerline_mask', type=bool, default=False,
                     help='merge the mask of rib and centerline.')
+parser.add_argument('--mha_to_nii', type=bool, default=True,
+                    help='convert mha file to nii file.')
 args = parser.parse_args()
 
 
@@ -135,3 +139,31 @@ if args.merge_rib_centerline_mask:
                                                rib_data_dict["spacing"],
                                                rib_data_dict["direction"],
                                                res_path)
+
+
+# convert mha file to nii file.
+if args.mha_to_nii:
+    mha_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/alpha_413_centerline/ann_rib_mask_20201215/ori_mask_mha/"
+    nii_dir = "/fileser/zhangfan/DataSet/pipeline_rib_mask/alpha_413_centerline/ann_rib_mask_20201215/mask_nii/"
+    csv_path = "/fileser/zhangfan/DataSet/pipeline_rib_mask/alpha_413_centerline/" \
+               "ann_rib_mask_20201215/csv/rib_mask_20201215.csv"
+
+    data_loader = DataIO()
+    file_names = os.listdir(mha_dir)
+    all_uids = []
+    for file_name in tqdm(file_names):
+        uid = file_name.split(".mha")[0]
+        all_uids.append(uid)
+
+        ori_path = mha_dir + file_name
+        dst_path = nii_dir + uid + ".nii.gz"
+
+        data_dict = data_loader.load_nii_image(ori_path)
+        ori_mask = data_dict["image"]
+        dst_mask = np.zeros(ori_mask.shape, np.uint8)
+        dst_mask[dst_mask != 0] = 1
+
+        data_loader.save_medical_info_and_data(dst_mask, data_dict["origin"], data_dict["spacing"],
+                                               data_dict["direction"], dst_path)
+
+    write_to_csv(all_uids, csv_path, header="seriesUid")

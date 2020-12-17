@@ -11,13 +11,16 @@ read_txt
 write_txt
 txt_to_csv
 csv_to_txt
+get_data_in_database
 """
 
 import os
 import csv
 import sys
-import numpy as np
 
+import json
+import lmdb
+import pandas as pd
 
 def open_for_csv(path):
     """Open a file with flags suitable for csv.reader.
@@ -49,6 +52,15 @@ def write_csv(csv_name, content, mul=True, mod="w"):
             mywriter.writerow(content)
 
 
+def save_csv(file_name, data, header_name=None):
+    if not os.path.exists(file_name):
+        os.mknod(file_name)
+
+    data = pd.DataFrame(columns=header_name, data=data)
+    data.drop_duplicates(inplace=True)
+    data.to_csv(file_name, index=False, encoding='utf-8-sig')
+
+
 def merge_csv(src1, src2, dst):
     """merge two .csv files."""
     contents_1 = read_csv(src1)
@@ -72,7 +84,7 @@ def write_to_csv(contents, save_path, header=None):
     csvfile.close()
 
 
-def folder_to_csv(file_dir, data_suffix, csv_path, header="seriesUid"):
+def folder_to_csv(file_dir, csv_path, data_suffix=".npz", header="seriesUid"):
     """convert filenames to .csv file."""
     file_names = os.listdir(file_dir)
     file_names = [file_name.split(data_suffix)[0] for file_name in file_names]
@@ -108,3 +120,18 @@ def csv_to_txt(csv_path, txt_path):
     """convert .csv file to .txt file."""
     contents = read_csv(csv_path)[1:]
     write_txt(txt_path, contents, mod="w")
+
+
+def get_data_in_database(uid, db_dir):
+    """Get data dict from database in .db format."""
+    env = lmdb.open(db_dir)
+    txn = env.begin()
+    value = txn.get(uid.encode())
+    if value is None:
+        print('Not found uid:', uid)
+        return None, None, None
+    info = str(value, encoding='utf-8')
+    info = json.loads(info)
+    env.close()
+
+    return info

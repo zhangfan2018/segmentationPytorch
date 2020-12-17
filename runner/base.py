@@ -72,6 +72,11 @@ class BaseModel:
         if os.path.exists(self.args.weight_dir):
             if self.is_print_out: print('Loading pre_trained model...')
             checkpoint = torch.load(self.args.weight_dir)
+            # net_state_dict = self.network.state_dict()
+            # pretrained_params = {k.replace('module.', ""): v for k, v in checkpoint['state_dict'].items()}
+            # pretrained_dict = {k: v for k, v in pretrained_params.items() if k in net_state_dict}
+            # net_state_dict.update(pretrained_dict)
+            # self.network.load_state_dict(net_state_dict)
             self.network.load_state_dict({k.replace('module.', ""): v for k, v in checkpoint['state_dict'].items()})
             self.start_epoch = checkpoint["epoch"]
             self.optimizer.load_state_dict(checkpoint["optimizer_dict"])

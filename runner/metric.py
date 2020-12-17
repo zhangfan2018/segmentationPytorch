@@ -39,6 +39,42 @@ class DiceMetric(nn.Module):
         return dice
 
 
+class LabeledDiceMetric(nn.Module):
+    """Dice Metric Function"""
+    def __init__(self, dims=[2, 3, 4]):
+        super(LabeledDiceMetric, self).__init__()
+        self.dims = dims
+
+    def forward(self, predict, gt, pred_labels, gt_labels, th=0.5, is_average=True):
+        predict = predict.float()
+        gt = gt.float()
+        pred = F.sigmoid(predict)
+        pred[pred < th] = 0
+        pred[pred >= th] = 1
+
+        intersection = torch.sum(pred * gt, dim=self.dims)
+        union = torch.sum(pred, dim=self.dims) + torch.sum(gt, dim=self.dims)
+        dice = (2. * intersection + 1e-5) / (union + 1e-5)
+        batch_num = pred.shape[0]
+
+        for i in range(batch_num):
+            if pred_labels[i] == 1 and gt_labels[i] == 1:
+                continue
+            elif pred_labels[i] == 0 and gt_labels[i] == 0:
+                dice[i] = 0.95
+            elif pred_labels[i] == 0 and gt_labels[i] == 1:
+                dice[i] = 0
+            elif pred_labels[i] == 1 and gt_labels[i] == 0:
+                if torch.sum(pred[i]) > 125:
+                    dice[i] = 0
+                else:
+                    dice[i] = 0.95
+
+        dice = dice.mean(0) if is_average else dice.sum(0)
+
+        return dice
+
+
 def compute_dice(predict, gt):
     predict = predict.astype(np.float)
     gt = gt.astype(np.float)

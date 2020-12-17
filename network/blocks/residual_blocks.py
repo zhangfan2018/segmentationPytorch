@@ -2,6 +2,7 @@
 Blocks:
 ResTwoLayerConvBlock
 ResFourLayerConvBlock
+ResConvBatchNormBlock
 ResBottleneckBlock
 DepthSeparableConv
 """
@@ -61,6 +62,47 @@ class ResFourLayerConvBlock(nn.Module):
         self.shortcut_unit_1 = nn.Sequential(
             nn.Conv3d(in_channel, mid_channel, kernel_size=1, bias=False),
             nn.InstanceNorm3d(mid_channel),
+        )
+
+        self.shortcut_unit_2 = nn.Sequential()
+        self.leaky_relu_1 = nn.LeakyReLU(inplace=True)
+        self.leaky_relu_2 = nn.LeakyReLU(inplace=True)
+
+    def forward(self, x):
+        output_1 = self.residual_unit_1(x)
+        output_1 += self.shortcut_unit_1(x)
+        output_1 = self.leaky_relu_1(output_1)
+        output_2 = self.residual_unit_2(output_1)
+        output_2 += self.shortcut_unit_2(output_1)
+        output = self.leaky_relu_2(output_2)
+
+        return output
+
+
+class ResConvBatchNormBlock(nn.Module):
+    def __init__(self, in_channel, mid_channel, out_channel, p=0.2):
+        """residual block, including four layer convolution,
+        batch normalization, drop out and leaky ReLU"""
+        super(ResConvBatchNormBlock, self).__init__()
+        self.residual_unit_1 = nn.Sequential(
+            nn.Conv3d(in_channel, mid_channel, kernel_size=3, stride=1, padding=1, bias=False),
+            nn.BatchNorm3d(mid_channel),
+            nn.Dropout3d(p=p, inplace=True),
+            nn.LeakyReLU(inplace=True),
+            nn.Conv3d(mid_channel, mid_channel, kernel_size=3, stride=1, padding=1, bias=False),
+            nn.BatchNorm3d(mid_channel),
+        )
+        self.residual_unit_2 = nn.Sequential(
+            nn.Conv3d(mid_channel, mid_channel, kernel_size=3, stride=1, padding=1, bias=False),
+            nn.BatchNorm3d(mid_channel),
+            nn.Dropout3d(p=p, inplace=True),
+            nn.LeakyReLU(inplace=True),
+            nn.Conv3d(mid_channel, out_channel, kernel_size=3, stride=1, padding=1, bias=False),
+            nn.BatchNorm3d(out_channel),
+        )
+        self.shortcut_unit_1 = nn.Sequential(
+            nn.Conv3d(in_channel, mid_channel, kernel_size=1, bias=False),
+            nn.BatchNorm3d(mid_channel),
         )
 
         self.shortcut_unit_2 = nn.Sequential()

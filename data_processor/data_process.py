@@ -267,9 +267,9 @@ class ProcessCropData:
             is_crop_image_mask = True
 
         if is_crop_image_mask:
-            margin = [int(args.extend_size / spacing_ori[0]),
+            margin = [int(args.extend_size / spacing_ori[2]),
                       int(args.extend_size / spacing_ori[1]),
-                      int(args.extend_size / spacing_ori[2])]
+                      int(args.extend_size / spacing_ori[0])]
             crop_image, crop_mask = crop_image_mask(image_zyx, mask_zyx, margin=margin)
             data_dict["crop_image"] = crop_image
             data_dict["crop_mask"] = crop_mask

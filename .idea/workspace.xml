@@ -10,9 +10,54 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="update version-2020.12.01">
+    <list default="true" id="a23192c7-87bc-4062-af03-c1ec9771ea04" name="Default Changelist" comment="fix resample mask">
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/0_gen_resize_image_mask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/1_data_prepare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/2_gen_crop_image_mask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/3_analysis_mask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/4_gen_high_resolution_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/5_convert_fracture_bbox_to_mask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/6_calculate_filter_num.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/calculate_centerline_filter_num.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/detect_eval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/read_image.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/temp6.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/eval_det_result/plot_RP_curve.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_csl_seg/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_csl_seg/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_patch_seg/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_patch_seg/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_seg/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_seg/test_crop_patch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_seg/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiments/rib_fracture_seg/pretrain_seg_cls/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/res_cls_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/unet_cascade_cls_seg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/unet_multi_task.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/unet_multi_task_IN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runner/multi_task_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runner/temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/bbox_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_processor/data_resample.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processor/data_resample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processor/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processor/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processor/data_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processor/data_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/0_data_prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/0_data_prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/blocks/residual_blocks.py" beforeDir="false" afterPath="$PROJECT_DIR$/network/blocks/residual_blocks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/args.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/args.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/loss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/metric.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/csv_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/csv_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/image_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/image_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/mask_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mask_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +87,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../data_download" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.3_convert_deploy_model">
-    <configuration name="1_data_postprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.detect_eval">
+    <configuration name="1_data_prepare" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -54,12 +99,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/1_data_postprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/1_data_prepare.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -68,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="3_convert_deploy_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="6_calculate_filter_num" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,12 +121,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/3_convert_deploy_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/6_calculate_filter_num.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="calculate_centerline_filter_num" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,12 +143,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/temp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/calculate_centerline_filter_num.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="detect_eval" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="segmentationPytorch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,12 +165,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process/detect_eval.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,12 +187,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_patch_seg" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_patch_seg/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.3_convert_deploy_model" />
-        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.detect_eval" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.1_data_postprocess" />
-        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.calculate_centerline_filter_num" />
+        <item itemvalue="Python.6_calculate_filter_num" />
+        <item itemvalue="Python.1_data_prepare" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +240,10 @@
       <workItem from="1606187448708" duration="13249000" />
       <workItem from="1606728640311" duration="6043000" />
       <workItem from="1606877349565" duration="1778000" />
-      <workItem from="1607055227520" duration="1415000" />
+      <workItem from="1607055227520" duration="2179000" />
+      <workItem from="1607307454222" duration="4701000" />
+      <workItem from="1607336828141" duration="99574000" />
+      <workItem from="1607677477067" duration="107316000" />
     </task>
     <task id="LOCAL-00001" summary="version_0905">
       <created>1599279212308</created>
@@ -295,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606786751322</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix resample mask">
+      <created>1607058795360</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607058795360</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +382,8 @@
     <MESSAGE value="update version-2020.11.3" />
     <MESSAGE value="update version-2020.11.24" />
     <MESSAGE value="update version-2020.12.01" />
-    <option name="LAST_COMMIT_MESSAGE" value="update version-2020.12.01" />
+    <MESSAGE value="fix resample mask" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix resample mask" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2472" y="178" key="#Deployment" timestamp="1603076747749">
@@ -339,63 +395,78 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2449" y="320" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1599811429931" />
-    <state width="1607" height="466" key="DebuggerActiveHint" timestamp="1603177336386">
+    <state width="1607" height="466" key="DebuggerActiveHint" timestamp="1608108609904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1607" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608108609904" />
     <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603177336386" />
     <state width="1607" height="466" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602488974614" />
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1599214373799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599214373799" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606201186847">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608009850645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608009850645" />
     <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606201186847" />
     <state x="2660" y="275" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603072451990" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1604638534290">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1860" height="368" key="GridCell.Tab.0.bottom" timestamp="1608128607208">
+      <screen x="1920" y="3" width="1920" height="1040" />
     </state>
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125877638" />
+    <state width="1860" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1608128607208" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604638534290" />
     <state width="1877" height="303" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1604638534290">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1860" height="368" key="GridCell.Tab.0.center" timestamp="1608128607208">
+      <screen x="1920" y="3" width="1920" height="1040" />
     </state>
+    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125877638" />
+    <state width="1860" height="368" key="GridCell.Tab.0.center/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1608128607208" />
     <state width="1877" height="280" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604638534290" />
     <state width="1877" height="303" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1604638534289">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1860" height="368" key="GridCell.Tab.0.left" timestamp="1608128607208">
+      <screen x="1920" y="3" width="1920" height="1040" />
     </state>
+    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125877638" />
+    <state width="1860" height="368" key="GridCell.Tab.0.left/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1608128607208" />
     <state width="1877" height="280" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604638534289" />
     <state width="1877" height="303" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1604638534290">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1860" height="368" key="GridCell.Tab.0.right" timestamp="1608128607208">
+      <screen x="1920" y="3" width="1920" height="1040" />
     </state>
+    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125877638" />
+    <state width="1860" height="368" key="GridCell.Tab.0.right/0.0.1920.1040/1920.3.1920.1040@1920.3.1920.1040" timestamp="1608128607208" />
     <state width="1877" height="280" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604638534290" />
     <state width="1877" height="303" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457239" />
-    <state width="1877" height="215" key="GridCell.Tab.1.bottom" timestamp="1603852595546">
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1608125836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125836050" />
     <state width="1877" height="215" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603852595546" />
     <state width="1877" height="255" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457201" />
-    <state width="1877" height="215" key="GridCell.Tab.1.center" timestamp="1603852595546">
+    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1608125836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125836050" />
     <state width="1877" height="215" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603852595546" />
     <state width="1877" height="255" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457200" />
-    <state width="1877" height="215" key="GridCell.Tab.1.left" timestamp="1603852595546">
+    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1608125836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125836050" />
     <state width="1877" height="215" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603852595546" />
     <state width="1877" height="255" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457200" />
-    <state width="1877" height="215" key="GridCell.Tab.1.right" timestamp="1603852595546">
+    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1608125836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1608125836050" />
     <state width="1877" height="215" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603852595546" />
     <state width="1877" height="255" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603071457200" />
-    <state x="601" y="191" key="SettingsEditor" timestamp="1604300961235">
+    <state x="601" y="191" key="SettingsEditor" timestamp="1607912055483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="601" y="191" key="SettingsEditor/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1607912055483" />
     <state x="601" y="191" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604300961235" />
     <state x="2521" y="191" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603072425999" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603077285042">
@@ -423,9 +494,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="761" y="426" key="git4idea.remote.GitConfigureRemotesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1600826508875" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603176128157">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607413060913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.3.1920.1040@0.0.1920.1040" timestamp="1607413060913" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603176128157" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1602583749304" />
   </component>
@@ -443,27 +515,51 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet_downsample2X.coverage" NAME="unet_downsample2X Coverage Results" MODIFIED="1599647335623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$test_lung_airway_coarse_seg.coverage" NAME="test_lung_airway_coarse_seg Coverage Results" MODIFIED="1599702502327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$temp.coverage" NAME="temp Coverage Results" MODIFIED="1604638534270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$1_divide_data.coverage" NAME="1_divide_data Coverage Results" MODIFIED="1599559028337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$test_rib_label24_seg.coverage" NAME="test_rib_label24_seg Coverage Results" MODIFIED="1599716225232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$2_gen_crop_image_mask.coverage" NAME="2_gen_crop_image_mask Coverage Results" MODIFIED="1607912547761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$1_data_postprocess.coverage" NAME="1_data_postprocess Coverage Results" MODIFIED="1604307351833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test_crop_patch.coverage" NAME="test_crop_patch Coverage Results" MODIFIED="1608101478305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_seg" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet_deploy.coverage" NAME="unet_deploy Coverage Results" MODIFIED="1599647278890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare.coverage" NAME="0_data_prepare Coverage Results" MODIFIED="1603948222189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$download_dicom_from_jianying.coverage" NAME="download_dicom_from_jianying Coverage Results" MODIFIED="1601346816247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1604369797899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$3_convert_deploy_model.coverage" NAME="3_convert_deploy_model Coverage Results" MODIFIED="1606786617280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$mask_download.coverage" NAME="mask_download Coverage Results" MODIFIED="1602222819490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp5.coverage" NAME="temp5 Coverage Results" MODIFIED="1607671153003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$res_cls_network.coverage" NAME="res_cls_network Coverage Results" MODIFIED="1608012165610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$0_preprocess.coverage" NAME="0_preprocess Coverage Results" MODIFIED="1599574136432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$2_compute_dice.coverage" NAME="2_compute_dice Coverage Results" MODIFIED="1602927697218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$track_gpu_memory.coverage" NAME="track_gpu_memory Coverage Results" MODIFIED="1599747325870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_utils" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare__1_.coverage" NAME="0_data_prepare (1) Coverage Results" MODIFIED="1599702060099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$1_data_prepare.coverage" NAME="1_data_prepare Coverage Results" MODIFIED="1608102949380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet_preprocess_deploy.coverage" NAME="unet_preprocess_deploy Coverage Results" MODIFIED="1599647189331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$2_analysis_data.coverage" NAME="2_analysis_data Coverage Results" MODIFIED="1599560485381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$test_temp.coverage" NAME="test_temp Coverage Results" MODIFIED="1602727778158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$multi_thread_process.coverage" NAME="multi_thread_process Coverage Results" MODIFIED="1599557300474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_processor" />
-    <SUITE FILE_PATH="coverage/segmentationPytorch$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1604301106348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp1.coverage" NAME="temp1 Coverage Results" MODIFIED="1607584412767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test__2_.coverage" NAME="test (2) Coverage Results" MODIFIED="1608100804653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_patch_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp__1_.coverage" NAME="temp (1) Coverage Results" MODIFIED="1607311160801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp3.coverage" NAME="temp3 Coverage Results" MODIFIED="1607588640722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp6.coverage" NAME="temp6 Coverage Results" MODIFIED="1608089573606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$data_loader.coverage" NAME="data_loader Coverage Results" MODIFIED="1602568846839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_processor" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$unet.coverage" NAME="unet Coverage Results" MODIFIED="1600744079564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network/unet_framework" />
     <SUITE FILE_PATH="coverage/segmentationPytorch$merge_mask.coverage" NAME="merge_mask Coverage Results" MODIFIED="1603180618484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1608040300411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/pretrain_seg_cls" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$train.coverage" NAME="train Coverage Results" MODIFIED="1608085302666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_csl_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$5_convert_fracture_bbox_to_mask.coverage" NAME="5_convert_fracture_bbox_to_mask Coverage Results" MODIFIED="1608012861804" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$unet_multi_task.coverage" NAME="unet_multi_task Coverage Results" MODIFIED="1607914859580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$unet_cascade_cls_seg.coverage" NAME="unet_cascade_cls_seg Coverage Results" MODIFIED="1607954364768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp.coverage" NAME="temp Coverage Results" MODIFIED="1607307646597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$1_divide_data.coverage" NAME="1_divide_data Coverage Results" MODIFIED="1599559028337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test_rib_label24_seg.coverage" NAME="test_rib_label24_seg Coverage Results" MODIFIED="1599716225232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare.coverage" NAME="0_data_prepare Coverage Results" MODIFIED="1608101990370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$download_dicom_from_jianying.coverage" NAME="download_dicom_from_jianying Coverage Results" MODIFIED="1601346816247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test.coverage" NAME="test Coverage Results" MODIFIED="1608125836013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_patch_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$3_convert_deploy_model.coverage" NAME="3_convert_deploy_model Coverage Results" MODIFIED="1606786617280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$mask_download.coverage" NAME="mask_download Coverage Results" MODIFIED="1608009691176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_download" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$read_image.coverage" NAME="read_image Coverage Results" MODIFIED="1607434834066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp4.coverage" NAME="temp4 Coverage Results" MODIFIED="1608010566524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$track_gpu_memory.coverage" NAME="track_gpu_memory Coverage Results" MODIFIED="1599747325870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_utils" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_data_prepare__1_.coverage" NAME="0_data_prepare (1) Coverage Results" MODIFIED="1599702060099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/lung_airway_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$6_calculate_filter_num.coverage" NAME="6_calculate_filter_num Coverage Results" MODIFIED="1608108623798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$calculate_centerline_filter_num.coverage" NAME="calculate_centerline_filter_num Coverage Results" MODIFIED="1608112356144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$2_analysis_data.coverage" NAME="2_analysis_data Coverage Results" MODIFIED="1599560485381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocess/lung_airway_segmentation" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test_temp.coverage" NAME="test_temp Coverage Results" MODIFIED="1602727778158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_centerline_seg/rib_centerline_fine_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$4_gen_high_resolution_image.coverage" NAME="4_gen_high_resolution_image Coverage Results" MODIFIED="1607910239354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$multi_thread_process.coverage" NAME="multi_thread_process Coverage Results" MODIFIED="1599557300474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_processor" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$0_gen_resize_image_mask.coverage" NAME="0_gen_resize_image_mask Coverage Results" MODIFIED="1607587280877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1608098588137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/fracture_seg" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$detect_eval.coverage" NAME="detect_eval Coverage Results" MODIFIED="1608128590236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$3_analysis_mask.coverage" NAME="3_analysis_mask Coverage Results" MODIFIED="1607520208062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
+    <SUITE FILE_PATH="coverage/segmentationPytorch$temp2.coverage" NAME="temp2 Coverage Results" MODIFIED="1607651349195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/experiments/rib_fracture_seg/data_process" />
   </component>
 </project>
